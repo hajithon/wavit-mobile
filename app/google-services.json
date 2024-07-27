@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443781899822",
+    "project_id": "wavit-92b96",
+    "storage_bucket": "wavit-92b96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443781899822:android:660d619f88b882c45021bf",
+        "android_client_info": {
+          "package_name": "com.example.challengeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIXElNyIJEF9pDWIZgAT39pD791GFvBJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
