@@ -19,6 +19,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.challengeapp.ui.theme.Blue
 import com.example.challengeapp.ui.theme.ChallengeAppTheme
+import com.example.challengeapp.ui.theme.Grey400
+import com.example.challengeapp.ui.theme.LightBlue
 import com.example.challengeapp.ui.theme.White
 import com.example.challengeapp.util.CustomTextStyle
 import com.example.challengeapp.util.getTextStyle
@@ -37,7 +39,7 @@ fun BottomNavigationBar(navController: NavController) {
     BottomNavigation (
         modifier = Modifier,
         backgroundColor = White,
-        contentColor = Blue
+        contentColor = LightBlue
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
@@ -55,14 +57,18 @@ fun BottomNavigationBar(navController: NavController) {
                     Icon(
                         painter = painterResource(id = item.icon),
                         contentDescription = null,
-                        modifier = Modifier.size(20.dp)
+                        modifier = Modifier.size(20.dp),
+                        tint = if (currentRoute == item.screenRoute) Blue else Grey400
                     )
                 },
                 label = {
                     Text(
                         text = item.title,
                         style = getTextStyle(style = CustomTextStyle.H7)
-                            .copy(fontSize = 11.sp)
+                            .copy(
+                                fontSize = 11.sp,
+                                color = if (currentRoute == item.screenRoute) Blue else Grey400
+                            )
                     )
                 }
             )

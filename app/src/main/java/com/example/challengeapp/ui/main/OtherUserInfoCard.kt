@@ -63,7 +63,7 @@ fun OtherUserInfoCard() {
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
-                        text = "박빠찌",
+                        text = "박정민",
                         style = getTextStyle(style = CustomTextStyle.H5).copy(color = Grey900)
                     )
                 }

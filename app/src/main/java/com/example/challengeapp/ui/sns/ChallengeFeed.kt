@@ -28,9 +28,11 @@ import com.example.challengeapp.util.CustomTextStyle
 import com.example.challengeapp.util.getTextStyle
 
 @Composable
-fun ChallengeFeed() {
+fun ChallengeFeed(
+    modifier: Modifier = Modifier
+) {
     Card (
-        modifier = Modifier.height(410.dp),
+        modifier = modifier.height(410.dp),
         colors = CardDefaults.cardColors(Grey100)
     ) {
         Image(
