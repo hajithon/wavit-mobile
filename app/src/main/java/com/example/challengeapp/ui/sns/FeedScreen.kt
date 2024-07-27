@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -25,13 +26,25 @@ fun FeedScreen() {
         modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp),
         userScrollEnabled = true
     ) {
-        item(5) {
-            ChallengeFeed(Modifier.padding(bottom = 15.dp))
-            ChallengeFeed(Modifier.padding(bottom = 15.dp))
-            ChallengeFeed(Modifier.padding(bottom = 15.dp))
-            ChallengeFeed(Modifier.padding(bottom = 15.dp))
-            ChallengeFeed(Modifier.padding(bottom = 15.dp))
-            ChallengeFeed(Modifier.padding(bottom = 15.dp))
+
+        item(4) {
+            ChallengeFeed(
+                modifier = Modifier.padding(bottom = 15.dp),
+                feedInfo = feedList[0]
+            )
+            ChallengeFeed(
+                modifier = Modifier.padding(bottom = 15.dp),
+                feedInfo = feedList[1]
+            )
+            ChallengeFeed(
+                modifier = Modifier.padding(bottom = 15.dp),
+                feedInfo = feedList[2]
+            )
+            ChallengeFeed(
+                modifier = Modifier.padding(bottom = 15.dp),
+                feedInfo = feedList[3]
+            )
+
         }
     }
 }
